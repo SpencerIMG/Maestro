@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    font-family: Helvetica, Trebuchet;
+
+}
+
+/*BEGIN Navbar*/
+.top-navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". contact-now . menu";
+}
+
+.contact-now {
+    grid-area: contact-now;
+}
+
+.menu {
+    grid-area: menu;
+}
+/*END Navbar*/
+
+/*BEGIN Landing*/
+.landing {
+    display: grid;
+    min-height: 800px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr auto auto auto 3fr;
+    grid-template-areas: 
+    ". . . . . . . . . ."
+    ". . . . .  lndTlt lndTlt lndTlt lndTlt ."
+    ". . . .  .  .lndTag lndTag . ."
+    ". . . . .  .lndCta lndCta . ."
+    ". . . . . . . . . .";
+    
+    background-image: url("test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-title {
+    grid-area: lndTlt;
+    font-size: 5em;
+    color: white;
+    margin: 0;
+}
+
+.landing-tagline {
+    grid-area: lndTag;
+    font-size: 2em;
+    color: white;
+    margin-top: -.5em;
+}
+
+.landing-cta {
+    grid-area: lndCta;
+    border: solid white;
+    color: white;
+    text-align: center;
+    font-size: 1.75em
+}
+/*END Landing*/
+
+.our-story {
+    
+}
+
+.discover {
+    
+}
+
+.contact {
+    
+}
+
+@media only screen and (min-width: 600px)  {
+        
+    .top-navbar {
+            
+    }
+        
+    .discover {
+            
+    }
+
+}
