@@ -1,8 +1,14 @@
 html {
     height: 100%;
+    width: 100%;
     font-size: 16px;
     line-height: 1.15;
-    font-family: 'Josefin Sans',  'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    margin: 0;
 }
 
 /*BEGIN Navbar*/
@@ -47,7 +53,7 @@ html {
     grid-template-rows: 1em 1fr 1fr;
     grid-column-gap: 0;
     grid-template-areas: ". . . . ." ". mAbout mVenue mEvents ." ". mCal mGall mCon .";
-    background-color: rgb(203, 149, 64, .95);
+    background-color: rgb(203, 149, 64, .93);
 }
 
 .menu-about {
@@ -102,6 +108,7 @@ html {
 .menu-item li {
     margin-top: .5rem;
 }
+
 .menu-item a {
     color: white;
     text-decoration: none;
@@ -280,7 +287,7 @@ discover-img {
         display: none;
     }
 
-/*    Change size of dropdown and spacing */
+    /*    Change size of dropdown and spacing */
     .dropdown-menu-maestro {
         grid-area: 1 / 1 / span 4 / span 10;
 
@@ -288,32 +295,37 @@ discover-img {
     .menu-item li {
         margin-top: 1em;
     }
-    
-    menu-item h3 {font-size: 1rem;}
+
+    menu-item h3 {
+        font-size: 1rem;
+    }
 
     /*BEGIN Landing*/
     .landing {
-        grid-template-rows: 1fr 2fr 2fr 2fr 1fr 3fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr .5fr 3fr;
         grid-template-columns: 1fr repeat(9, 1fr);
-        grid-template-areas: ". . . . . . . . . ." ". . lndTlt lndTlt lndTlt lndTlt lndTlt . . ." ". . . . . . . . . ." ". . lndTag lndTag lndTag lndTag lndTag lndTag . ." ". lndCta lndCta lndCta lndCta . . . . ." ". . . . . . . . . .";
+        grid-template-areas: ". . . . . . . . . ." ". lndTlt lndTlt lndTlt lndTlt lndTlt . . . ." ". . . . . . . . . ." ". lndTag lndTag lndTag lndTag lndTag lndTag . . ." ". lndCta lndCta lndCta lndCta . . . . ." ". . . . . . . . . .";
         background-position: left;
 
     }
 
     .landing-title {
         font-size: 2.3rem;
-        margin-left: -10%;
+        margin-left: 10%;
     }
 
     .landing-tagline {
         font-size: 1.7rem;
-        margin-left: -10%;
+        margin-left: 15%;
+    }
+
+    .landing-cta {
+        margin-left: 15%;
     }
 
     .our-story {
         grid-template-columns: 1fr 5fr 1fr;
         grid-template-rows: 1fr auto auto 1fr;
-
     }
 
     .our-story-title {
@@ -338,6 +350,7 @@ discover-img {
         grid-area: discImg;
         overflow: hidden;
     }
+
     .discover-img img {
         max-width: 100%;
         height: auto;
@@ -434,6 +447,37 @@ discover-img {
 
 @media screen and (min-width: 1200px) {
     html {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .dropdown-menu-maestro {
+        display: grid;
+        z-index: 9;
+        grid-area: 1 / 1 / span 3 / span 10;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr .2fr;
+        grid-template-rows: .1fr 1fr 1fr;
+        grid-column-gap: 0;
+        grid-template-areas: ". . . . ." ". mAbout mVenue mEvents ." ". mCal mGall mCon .";
+        background-color: rgb(203, 149, 64, .95);
+    }
+
+    .menu-item h3 {
+        grid-area: mHead;
+        color: white;
+        border-bottom: solid;
+        width: 6rem;
+    }
+
+    .landing {
+        display: grid;
+        min-height: 700px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 1fr 2fr 2fr .5fr 3fr;
+        grid-template-areas: ". . . . . . . . . ." ". . . . lndTlt lndTlt lndTlt lndTlt lndTlt ." ". . . .  .  .lndTag lndTag lndTag ." ". . . . .  .lndCta lndCta . ." ". . . . . . . . . .";
+
+        background-image: url("../src/imgs/test.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 }
