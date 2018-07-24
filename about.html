@@ -4,32 +4,90 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link rel="stylesheet" href="about-style.css">
+    <link rel="stylesheet" href="css/about-style.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat" rel="stylesheet">
     
-    <!--Import Bootstrap CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
 </head>
 
 <body>
    
     <div class="top-navbar">
-    
+
         <div class="contact-now">
             <p>Book your event now. Call 1-800-FAKE-NUMB</p>
         </div>
-        
+
         <div class="menu">
-            Menu
+            <input id="toggleMenu" type="image" src="src/imgs/menu-svg.svg">
         </div>
 
     </div>
-    
+
+
+
     <div class="aboutUs-landing">
 
-        
+        <!--Dropdown Menu *hidden by default unless clicked-->
+        <div id="dropDown" class="dropdown-menu-maestro" style="display: none;">
+
+            <div class="menu-about menu-item">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="">Our Story</a></li>
+                    <li><a href="">Approved Vendors</a></li>
+                    <li><a href="">Become a Vendor</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-venue menu-item">
+                <h3>Venues</h3>
+                <ul>
+                    <li><a href="">Banquet Hall</a></li>
+                    <li><a href="">Courtyard</a></li>
+                    <li><a href="">Conference Hall</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-events menu-item">
+                <h3>Events</h3>
+                <ul>
+                    <li><a href="">Weddings</a></li>
+                    <li><a href="">Corporate</a></li>
+                    <li><a href="">Teen Events</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-calendar menu-item">
+                <h3>Calendar</h3>
+                <ul>
+                    <li><a href="">Public Events</a></li>
+                    <li><a href="">Open House</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-gallery menu-item">
+                <h3>Gallery</h3>
+
+            </div>
+
+            <div class="menu-contact menu-item">
+                <h3>Contact</h3>
+
+            </div>
+
+        </div>
+
+        <div class="aboutUs-textBox">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus consequat dui eu condimentum. Ut in risus ac nibh condimentum fermentum a vitae leo. Aliquam tincidunt massa sed pretium vestibulum. In sit amet dolor pretium, lobortis nunc in, dapibus mi. Cras non lectus sit amet arcu elementum vestibulum.</p>
+        </div>
+
+
+
     </div>
     
 <div class="vendors">
@@ -53,26 +111,6 @@
 
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
-    
-    <!--Import Bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 
 </html>

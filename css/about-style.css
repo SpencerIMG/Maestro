@@ -29,21 +29,50 @@ html {
 
 /*END Navbar*/
 
+.dropdown-menu-maestro {
+    display: grid;
+    z-index: 9;
+    grid-area: 1 / 1 / span 2 / span 3;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr .2fr;
+    grid-template-rows: 1em 1fr 1fr;
+    grid-column-gap: 0;
+    grid-template-areas: ". . . . ." ". mAbout mVenue mEvents ." ". mCal mGall mCon .";
+    background-color: rgb(203, 149, 64, .93);
+}
+
 /*BEGIN Landing*/
 
 .aboutUs-landing {
     display: grid;
-    min-height: 550px;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    grid-template-areas:;
-
-    background-image: url("test.png");
+    max-height: 550px;
+    grid-template-columns: 5fr 3.5fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    background-image: url("../src/imgs/test.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+.aboutUs-textBox {
+    grid-area: 1 / 2 / span 2 / 2;
+    background-image: url(../src/imgs/gold-background.png);
+    align-content: center;
+    color: white;
+}
+
+.aboutUs-textBox h3 {
+    font-size: 2rem;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.aboutUs-textBox p{
+    font-size: 1rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+}
 
 /*END Landing*/
 
@@ -134,7 +163,6 @@ become-img {
 }
 
 /*END Discover*/
-
 
 /*SmartPhone*/
 
@@ -281,4 +309,37 @@ become-img {
     html {
         font-size: 20px;
     }
+    
+    .aboutUs-landing {
+    display: grid;
+    height: 700px;
+    grid-template-columns: 5fr 3.5fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    background-image: url("../src/imgs/test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutUs-textBox {
+    grid-area: 1 / 2 / span 2 / 2;
+    background-image: url(../src/imgs/gold-background.png);
+    align-content: center;
+    color: white;
+}
+
+.aboutUs-textBox h3 {
+    font-size: 2.4rem;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.aboutUs-textBox p{
+    font-size: 1.3rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 3%;
+}
+
 }
