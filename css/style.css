@@ -14,9 +14,9 @@ body {
 /*BEGIN Navbar*/
 
 .top-navbar {
-    height: auto;
+    height: 3rem;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr auto;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: ". contact-now . menu";
 }
@@ -37,7 +37,8 @@ body {
 
 #toggleMenu {
     height: 2.5rem;
-    width: auto;
+    height: auto;
+    width: 3rem;
     float: right;
 }
 
@@ -50,9 +51,9 @@ body {
     z-index: 9;
     grid-area: 1 / 1 / span 3 / span 10;
     grid-template-columns: 1.5fr 1fr 1fr 1fr .2fr;
-    grid-template-rows:  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-column-gap: 0;
-    grid-template-areas:  ". mAbout mVenue mEvents ." ". mCal mGall mCon .";
+    grid-template-areas: ". mAbout mVenue mEvents ." ". mCal mGall mCon .";
     background-color: rgb(203, 149, 64, .93);
 }
 
@@ -93,7 +94,11 @@ body {
     grid-area: mHead;
     color: white;
     border-bottom: solid;
+    font-size: 1.3rem;
     width: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
 }
 
 .menu-item ul {
@@ -111,6 +116,7 @@ body {
 
 .menu-item a {
     color: white;
+    font-size: 1rem;
     text-decoration: none;
     line-height: 1.3;
 }
@@ -126,7 +132,9 @@ body {
 
 .landing {
     display: grid;
-    min-height: 550px;
+    position: relative;
+    min-height: 300px;
+    max-height: 350px;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr auto auto .5fr 3fr;
     grid-template-areas: ". . . . . . . . . ." ". . . . . lndTlt lndTlt lndTlt lndTlt ." ". . . .  .  .lndTag lndTag lndTag ." ". . . . .  .lndCta lndCta . ." ". . . . . . . . . .";
@@ -147,15 +155,15 @@ body {
     margin: 0;
 }
 
-.landing-title h3{
+.landing-title h3 {
     font-size: 3.5rem;
     margin: 0;
 }
 
 .landing-title p {
     font-size: 2.3rem;
+    float: left;
     margin: 0;
-    margin-left: 10%;
 }
 
 .landing-tagline {
@@ -194,6 +202,9 @@ body {
     min-height: 200px;
     margin-top: -30px;
     display: grid;
+    position: relative;
+    z-index: 2;
+    box-shadow: -5px -10px 10px rgba(0, 0, 0, .3);
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: .5fr 1fr auto .5fr;
     grid-template-areas: ". . ." ". storyTlt ." ". storyBdy ." ". . .";
@@ -206,14 +217,15 @@ body {
     grid-area: storyTlt;
     text-align: center;
     color: #dda852;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
 }
 
 .story-body {
     grid-area: storyBdy;
+    font-weight: 400;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     vertical-align: middle;
 }
 
@@ -249,10 +261,12 @@ body {
     margin-right: auto;
     color: white;
     font-size: 2rem;
+    font-weight: 600;
 }
 
 .discover-text p {
     max-height: 100%;
+    font-weight: 400;
     width: 80%;
     margin: auto;
     margin-top: 20px;
@@ -290,6 +304,10 @@ discover-img {
 
 @media only screen and (max-width: 600px) {
 
+    html {
+        font-size: 14px;
+    }
+
     .top-navbar {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr 1fr;
@@ -306,12 +324,20 @@ discover-img {
         grid-area: 1 / 1 / span 4 / span 10;
 
     }
+    
+    .menu-item{
+        margin-top: 5%;
+    }
     .menu-item li {
-        margin-top: 1em;
+        margin-top: .5rem;
+        margin-right: 1rem;
     }
 
-    menu-item h3 {
-        font-size: 1rem;
+    .menu-item h3 {
+        font-size: 1.3rem;
+    }
+    .menu-item a {
+        font-size: 1.1rem;
     }
 
     /*BEGIN Landing*/
@@ -335,17 +361,17 @@ discover-img {
     .landing-cta {
         margin-left: 15%;
     }
-    
-    .landing-title h3{
-    font-size: 3rem;
-    margin: 0;
-}
 
-.landing-title p {
-    font-size: 2rem;
-    margin: 0;
-    margin-left: 5%;
-}
+    .landing-title h3 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .landing-title p {
+        font-size: 2rem;
+        margin: 0;
+        margin-left: 5%;
+    }
 
     .our-story {
         grid-template-columns: 1fr 5fr 1fr;
@@ -469,7 +495,7 @@ discover-img {
 
 /*bigscreens*/
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
     html {
         font-size: 20px;
     }
@@ -490,6 +516,11 @@ discover-img {
         color: white;
         border-bottom: solid;
         width: 6rem;
+        font-size: 2.5rem;
+    }
+
+    .menu-item a {
+        font-size: 1.8rem;
     }
 
     .landing {
@@ -505,17 +536,16 @@ discover-img {
         background-size: cover;
         background-position: top;
     }
-    
-    .landing-title h3{
-    font-size: 4.5rem;
-    margin: 0;
-}
 
-.landing-title p {
-    font-size: 2.8rem;
-    margin: 0;
-    margin-left: 30%;
-}
-    
-    
+    .landing-title h3 {
+        font-size: 4.5rem;
+        margin: 0;
+    }
+
+    .landing-title p {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+
+
 }
