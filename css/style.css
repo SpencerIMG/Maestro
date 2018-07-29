@@ -11,14 +11,22 @@ body {
     margin: 0;
 }
 
+.maestro-logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+    
+}
+
 /*BEGIN Navbar*/
 
 .top-navbar {
     height: 3rem;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr auto ;
     grid-template-rows: auto;
-    grid-template-areas: ". contact-now . menu";
+    grid-template-areas: ". contact-now . menuTxt menu";
 }
 
 .contact-now {
@@ -28,11 +36,19 @@ body {
 }
 
 .contact-now p {
-    margin-bottom: 0px;
+    font-size: 1.1rem;
+}
+
+.menuTxt {
+    grid-area: menuTxt;
+    text-align: right;
+    margin-right: 5%;
 }
 
 .menu {
     grid-area: menu;
+    height: 2rem;
+    width: auto;
 }
 
 #toggleMenu {
@@ -97,7 +113,7 @@ body {
     font-size: 1.3rem;
     width: 3.5rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 
 }
 
@@ -133,8 +149,7 @@ body {
 .landing {
     display: grid;
     position: relative;
-    min-height: 300px;
-    max-height: 350px;
+height: 500px;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr auto auto .5fr 3fr;
     grid-template-areas: ". . . . . . . . . ." ". . . . . lndTlt lndTlt lndTlt lndTlt ." ". . . .  .  .lndTag lndTag lndTag ." ". . . . .  .lndCta lndCta . ." ". . . . . . . . . .";
@@ -170,7 +185,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     grid-area: lndTag;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 5%;
     margin-bottom: 5%;
     line-height: 1;
@@ -199,7 +214,7 @@ body {
 /*BEGIN OurStory*/
 
 .our-story {
-    min-height: 200px;
+    min-height: 300px;
     margin-top: -30px;
     display: grid;
     position: relative;
@@ -344,8 +359,7 @@ discover-img {
     .landing {
         grid-template-rows: 1fr 2fr 2fr 2fr .5fr 3fr;
         grid-template-columns: 1fr repeat(9, 1fr);
-        grid-template-areas: ". . . . . . . . . ." ". lndTlt lndTlt lndTlt lndTlt lndTlt . . . ." ". . . . . . . . . ." ". lndTag lndTag lndTag lndTag lndTag lndTag . . ." ". lndCta lndCta lndCta lndCta . . . . ." ". . . . . . . . . .";
-        background-position: left;
+        grid-template-areas: ". . . . . . . . . ." ". . . . . lndTlt lndTlt lndTlt lndTlt ." ". . . .  lndTag lndTag lndTag lndTag lndTag ." ". . . . lndCta lndCta lndCta lndCta . ." ". . . . . . . . . .";
 
     }
 
@@ -354,8 +368,9 @@ discover-img {
     }
 
     .landing-tagline {
-        font-size: 1.7rem;
-        margin-left: 15%;
+        font-size: 1.6rem;
+        font-weight: 200;
+        margin-left: 30%;
     }
 
     .landing-cta {
@@ -436,13 +451,22 @@ discover-img {
     html {
         font-size: 16px;
     }
+    
+    
+        .menu-item h3 {
+        font-size: 1rem;
+    }
+    .menu-item a {
+        font-size: .8rem;
+    }
 
 
     /*BEGIN Landing*/
     .landing {
+        height: 500px;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: 1fr auto auto auto 3fr;
-        grid-template-areas: ". . . . . . . . . ." ". . . . lndTlt lndTlt lndTlt lndTlt lndTlt lndTlt ." ". . . . lndTag lndTag lndTag lndTag lndTag ." ". . . . . lndCta lndCta lndCta lndCta ." ". . . . . . . . . .";
+        grid-template-areas: ". . . . . . . . . ." ". . . . . lndTlt lndTlt lndTlt lndTlt ." ". . . . . lndTag lndTag lndTag lndTag ." ". . . . . . lndCta lndCta lndCta ." ". . . . . . . . . .";
 
     }
 
@@ -453,6 +477,10 @@ discover-img {
     .landing-tagline {
         margin-top: 10%;
         font-size: 1.6rem;
+    }
+    
+    .landing-cta {
+        font-size: 1.5rem;
     }
 
     .top-navbar {
@@ -495,7 +523,7 @@ discover-img {
 
 /*bigscreens*/
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
     html {
         font-size: 20px;
     }

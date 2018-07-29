@@ -1,0 +1,233 @@
+html {
+    height: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+
+.dropdown-menu-maestro {
+    display: grid;
+    z-index: 3;
+    grid-area: 1 / 1 / 5 / 11!important;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr .2fr;
+    grid-template-rows: 1em 1fr 1fr;
+    grid-column-gap: 0;
+    grid-template-areas: ". . . . ." ". mAbout mVenue mEvents ." ". mCal mGall mCon .";
+    background-color: rgb(203, 149, 64, .93);
+}
+
+/*BEGIN Landing*/
+
+.venue-landing {
+    position: relative;
+    display: grid;
+    height: 500;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+    background-image: url("../src/imgs/test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.venue-textBox {
+    position: relative;
+    z-index: 1;
+    grid-area: 1 / 6 / 7 / 10 ;
+    background-image: url(../src/imgs/gold-background.png);
+    align-content: center;
+    color: white;
+}
+
+.venue-textBox h3 {
+    font-size: 2rem;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.venue-textBox p {
+    font-size: 1rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+/*END Landing*/
+
+/*Begin Venue Container*/
+
+.venue-container {
+    display: grid;
+    position: relative;
+    z-index: 10;
+    box-shadow: -5px -10px 10px rgba(0, 0, 0, .3);
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 350px 350px 350px ;
+    grid-template-areas: 
+    "banqImg banqTxt"
+    "courtTxt courtImg"
+    "confImg confTxt";
+}
+
+.venueGridImg {
+    
+}
+
+.venueGridTxt {
+    color: white;
+    background-image: url(../src/imgs/blue-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+
+.venueGridTxt h3{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+
+    
+}
+
+.venueGridTxt p {
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    text-align: left;
+}
+
+.venueGridTxt a {
+    width: 20%;
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+    color: white;
+    border: solid;
+    border-color: #dda852;
+    text-decoration: none;
+    padding: 1%;
+    margin-bottom: 2%;
+    
+}
+
+
+.banqImg {grid-area: banqImg;}
+.banqTxt {grid-area: banqTxt;}
+.banqTxt h3 {color: #dda852;}
+.courtImg {grid-area: courtImg;}
+.courtTxt {
+    grid-area: courtTxt;
+    background-image: url(../src/imgs/gold-background.png);
+}
+.courtTxt a {border-color: white;}
+.confImg {grid-area: confImg;}
+.confTxt {grid-area: confTxt;}
+.confTxt h3 {color: #dda852;}
+
+/*SmartPhone*/
+
+@media only screen and (max-width: 600px) {
+    
+    html {
+        font-size: 14px;
+    }
+
+    .top-navbar {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". . menuTxt menu";
+    }
+
+    .contact-now {
+        display: none;
+    }
+    
+    .dropdown-menu-maestro {
+    grid-area: 1 / 1 / 6 / 11!important;
+
+}
+
+    /*BEGIN Landing*/
+    .venue-landing {
+        display: grid;
+        height: 400px;
+    }
+    
+    .venue-textBox {
+        grid-area: 1 / 4 / 7 / 10;
+    }
+
+    .venue-textBox h3 {
+        font-size: 2rem;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .venue-textBox p {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+    
+/*Venue list*/
+    .venue-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr) ;
+    grid-template-areas:
+    "banqTxt"
+    "banqImg"
+    "courtTxt"
+    "courtImg"
+    "confTxt"
+    "confImg ";
+}
+    
+    .venueGridTxt a {
+    width: 30%;
+    text-align: center;
+    
+}
+
+
+}
+
+/*Tablet*/
+
+@media only screen and (min-width: 601px) and (max-width: 1020px) {
+
+    html {
+        font-size: 16px;
+    }
+    /*BEGIN Landing*/
+    .aboutUs-landing {
+        min-height: 500px;
+    }
+
+    .top-navbar {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: ". contact-now . menu";
+    }
+
+}
+
+/*bigscreens*/
+
+@media screen and (min-width: 1400px) {
+    html {
+        font-size: 20px;
+    }
+
+
+    .venue-landing {
+        min-height: 800px;
+
+    }
+
+
+}
